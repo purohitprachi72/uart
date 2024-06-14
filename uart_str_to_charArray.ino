@@ -6,7 +6,7 @@ void setup(){
 void loop(){
   
   while(Serial1.available()>0){
-    incomingData = Serial1.readStringUntil('\n');
+    String incomingData = Serial1.readStringUntil('\n');
     // Serial.println(incomingData);
     delay(100);
     char charArray[incomingData.length()+1];
